@@ -1,0 +1,41 @@
+.container {
+    max-width: 80%;
+    display: flex;
+}
+.column {
+    flex: 1;
+    margin: 0 15% 0 15%;
+    margin-top: 5%;
+}
+
+.block1, .block2, .block3, .block4 {
+    padding: 10px;
+}
+input, textarea {
+    padding: 3px;
+    border-radius: 5px #ccc;
+    width: fit-content;
+    display: block;
+    margin: 5px;
+    width: 200px;
+}
+button {
+    display: block;
+    width: 200px;
+    background-color: #32a801;
+    color: #fff;
+    padding: 7px;
+    font-size: 14px;
+    border-radius: 5px;
+    border-color: #32a801;
+    margin: 10px;
+}
+.response {
+    display: block;
+    height: 400px;
+    width: 300px;
+    border: 2px solid #ccc;
+}
+.block-response {
+    word-wrap: break-word;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+    <title>Green-api</title>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="block1">
+                    <input placeholder="idInstance" tabindex="1" name="idinstance" type="text" value="{{idinstance}}"/>
+                    <input placeholder="ApiTokenInstance" tabindex="2" name="apitokeninstance" type="password" value="{{apitokeninstance}}"/>
+                </div>
+
+                <div class="block2">
+                    <button tabindex="3" name="getsettings">GetSettings</button>
+                    <button tabindex="4" name="getstateinstance">GetStateInstance</button>
+                </div>
+
+
+                <div class="block3">
+                    <input placeholder="PhoneNumber" tabindex="5" name="phonenumber" type="text" />
+                    <textarea placeholder="Message text" tabindex="6" name="text"></textarea>
+                    <button tabindex="7" name="sendmessage">SendMessage</button>
+                </div>
+
+
+                <div class="block4">
+                    <input placeholder="PhoneNumber" tabindex="8" name="phonenumber2" type="text" />
+                    <input placeholder="FileUrl" tabindex="9" name="fileurl" type="text" />
+                    <button tabindex="10" name="sendfilebyurl">SendFileByUrl</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="column">
+            <div class="block-response">
+                <p>Ответ: </p>
+                <p class="response">{{ response }}</p>
+            </div>
+        </div>
+    </div>
+    {% for msg in get_flashed_messages() %}
+    <div class="flash"><p>{{ msg }}</p></div>
+    {% endfor %}
+</body>
+</html>
